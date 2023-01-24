@@ -1,19 +1,12 @@
 require('dotenv').config();
-const { Sequelize, Op } = require('sequelize');
+const { Sequelize } = require('sequelize');
 const fs = require('fs');
 const path = require('path');
 const {
-  DB_USER, DB_PASSWORD, DB_HOST, DB_DEPLOY
+  DB_USER, DB_PASSWORD, DB_HOST
 } = process.env;
 
-/*
-const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/countries`, {
-  logging: false,
-  native: false,
-});
-*/
-
-const sequelize = new Sequelize(DB_DEPLOY, {
+const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/gifts`, {
   logging: false,
   native: false,
 });
@@ -36,8 +29,8 @@ sequelize.models = Object.fromEntries(capsEntries);
 
 const { User, Gift, Date } = sequelize.models;
 
-User.belongsToMany(User, {through: 'UserXGift'});
-Gift.belongsToMany(Gift, {through: 'UserXGift'});
+User.belongsToMany(Gift, {through: 'UserXGift'});
+Gift.belongsToMany(User, {through: 'UserXGift'});
 Date.belongsTo(User, {through: 'UserXDate'});
 
 module.exports = {
