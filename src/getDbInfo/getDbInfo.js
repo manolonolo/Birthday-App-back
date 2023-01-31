@@ -124,9 +124,9 @@ const getDbInfo = async () => {
                 title: data.title,
                 description: data.description,
                 price: data.price,
-                image: data.imgURL,
+                imgURL: data.imgURL,
                 category: data.category,
-                combo: data.isCombo
+                isCombo: data.isCombo
             };
         })
         await Gift.bulkCreate(dbInfo)
