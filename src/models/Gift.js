@@ -2,6 +2,11 @@ const { DataTypes } = require('sequelize');
 
 module.exports = (sequelize) => {
     sequelize.define('gift', {
+        id: {
+            allowNull: false,
+            primaryKey: true,
+            type: DataTypes.TEXT
+        },
         title: {
             type: DataTypes.STRING,
             allowNull: false

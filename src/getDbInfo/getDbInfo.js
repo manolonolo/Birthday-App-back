@@ -3,6 +3,7 @@ const { Gift } = require('../db');
 
 const gifts = [
     {
+        id: 1,
         title: 'Happy B-Day Heart Box',
         description: 'Gift some love to your loved ones with this heart-shaped gift box containing a selection of sweet chocolates and candy.',
         price: 19.99,
@@ -11,6 +12,7 @@ const gifts = [
         isCombo: true
     },
     {
+        id: 2,
         title: 'Birthday Hoodie',
         description: 'A soft & warm hoodie that will make your buddy remember you every time he uses it to keep themselves warm.',
         price: 34.99,
@@ -19,6 +21,7 @@ const gifts = [
         isCombo: false
     },
     {
+        id: 3,
         title: 'Friendship Necklace',
         description: 'A necklace to show affection and mark your friendship with the ones close to you.',
         price: 9.99,
@@ -27,6 +30,7 @@ const gifts = [
         isCombo: false
     },
     {
+        id: 4,
         title: 'Friendship Hairclips',
         description: 'A couple of matching hairclips to have matching accessories with your matching friendos. Such a match!',
         price: 4.99,
@@ -35,6 +39,7 @@ const gifts = [
         isCombo: false
     },
     {
+        id: 5,
         title: 'Friendship Rings',
         description: 'A couple of rings so that you and your friend can carry a piece of yourself wherever you go!',
         price: 9.99,
@@ -43,6 +48,7 @@ const gifts = [
         isCombo: false
     },
     {
+        id: 6,
         title: 'BFF Box',
         description: 'Want to gift the ultimate form of friendship to your bestie? This is your go-to choice! This box includes the Friendship Necklace, Friendship Hairclips and Friendship Rings.',
         price: 19.99,
@@ -51,6 +57,7 @@ const gifts = [
         isCombo: true
     },
     {
+        id: 7,
         title: 'Really Clean Buddy Set',
         description: 'We all have that one friend that could really get better at their personal hygiene. There is no need to be too rough telling them with words, you can just give them this wonderful body-care set. Everyones nosestrills will thank you for that.',
         price: 29.99,
@@ -59,6 +66,7 @@ const gifts = [
         isCombo: false
     },
     {
+        id: 8,
         title: 'PS5',
         description: 'Okay so you REALLY love your buddy and want to show it REALLY bad. Or maybe you are just rich. Look no further, this is the gift for them! (I really wish I was your friend).',
         price: 499.99,
@@ -67,6 +75,7 @@ const gifts = [
         isCombo: false
     },
     {
+        id: 9,
         title: 'Steam $5 USD Gift Card',
         description: 'Want to get a game for your buddy but dont really know which one is the right one for them? Gift them the chance to choose! They will be gratefull.',
         price: 4.99,
@@ -75,6 +84,7 @@ const gifts = [
         isCombo: false
     },
     {
+        id: 10,
         title: 'Steam $10 USD Gift Card',
         description: 'Want to get a game for your buddy but dont really know which one is the right one for them? Gift them the chance to choose! They will be gratefull.',
         price: 9.99,
@@ -83,6 +93,7 @@ const gifts = [
         isCombo: false
     },
     {
+        id: 11,
         title: 'Steam $20 USD Gift Card',
         description: 'Want to get a game for your buddy but dont really know which one is the right one for them? Gift them the chance to choose! They will be gratefull.',
         price: 19.99,
@@ -91,6 +102,7 @@ const gifts = [
         isCombo: false
     },
     {
+        id: 12,
         title: 'Steam $50 USD Gift Card',
         description: 'Want to get a game for your buddy but dont really know which one is the right one for them? Gift them the chance to choose! They will be gratefull.',
         price: 49.99,
@@ -99,6 +111,7 @@ const gifts = [
         isCombo: false
     },
     {
+        id: 13,
         title: 'Rei Chikita Plushie',
         description: 'Rei chikita.',
         price: 999.99,
@@ -107,6 +120,7 @@ const gifts = [
         isCombo: false
     },
     {
+        id: 14,
         title: 'Hatsune Miku Plushie',
         description: 'We all know her. We all love her.',
         price: 19.99,
