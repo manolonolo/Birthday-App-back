@@ -5,17 +5,16 @@ const getGifts =  async (req, res) => {
     try {
         const { title } = req.query;
         if(title){
-        const gift = await Gift.findOne({
+        const gift = await Gift.findAll({
             where: {
                 title: {[Op.iLike]: '%' + title + '%'}
             } 
         })
-            if(!gift){
-                res.status(404).json('Gift not found')
-            } else{
-                res.json(gift)
-                console.log(gift)
-            }
+        if(!gift){
+            res.status(404).json('Gift not found')
+        } else{
+            res.json(gift)
+        }
         } else {
             const gifts = await Gift.findAll();
             if(gifts){
@@ -24,8 +23,8 @@ const getGifts =  async (req, res) => {
                 res.status(404).json('Gift not found')
             }
         }
-        } catch (error) {
-            res.status(404).json(error)
+    } catch (error) {
+        res.status(404).json(error)
     }
 }
 
